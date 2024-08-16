@@ -1,0 +1,8 @@
+F:\FXServer\scripting\MyResource\Client\bin\Release\net452\MyResource.Client.net.dll
+F:\FXServer\scripting\MyResource\Client\bin\Release\net452\CitizenFX.Core.Client.dll
+F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.csprojAssemblyReference.cache
+F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.AssemblyInfoInputs.cache
+F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.AssemblyInfo.cs
+F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.csproj.CoreCompileInputs.cache
+F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.csproj.CopyComplete
+F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.net.dll

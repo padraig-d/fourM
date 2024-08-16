@@ -1,0 +1,91 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETFramework,Version=v4.5.2": {
+      "CitizenFX.Core.Client/1.0.9461": {
+        "type": "package",
+        "compile": {
+          "lib/net45/CitizenFX.Core.Client.dll": {}
+        },
+        "runtime": {
+          "lib/net45/CitizenFX.Core.Client.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CitizenFX.Core.Client/1.0.9461": {
+      "sha512": "PEdB6732P1ejDyR9x2eeb7VNRp8IUzoeT0v1J25JXiEfbHKDmN0WuKhx6GtUo0t1HlFOpZiC6Yq9nALvMa7gzw==",
+      "type": "package",
+      "path": "citizenfx.core.client/1.0.9461",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "citizenfx.core.client.1.0.9461.nupkg.sha512",
+        "citizenfx.core.client.nuspec",
+        "lib/net45/CitizenFX.Core.Client.dll",
+        "lib/net45/CitizenFX.Core.Client.xml"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETFramework,Version=v4.5.2": [
+      "CitizenFX.Core.Client >= 1.0.*"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Visio\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "F:\\FXServer\\scripting\\MyResource\\Client\\MyResource.Client.csproj",
+      "projectName": "MyResource.Client",
+      "projectPath": "F:\\FXServer\\scripting\\MyResource\\Client\\MyResource.Client.csproj",
+      "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
+      "outputPath": "F:\\FXServer\\scripting\\MyResource\\Client\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+      ],
+      "originalTargetFrameworks": [
+        "net452"
+      ],
+      "sources": {
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net452": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net452": {
+        "dependencies": {
+          "CitizenFX.Core.Client": {
+            "target": "Package",
+            "version": "[1.0.*, )"
+          }
+        },
+        "downloadDependencies": [
+          {
+            "name": "CitizenFX.Framework.Client",
+            "version": "[0.2.3, 0.2.3]"
+          }
+        ],
+        "frameworkReferences": {
+          "CitizenFX.Framework.Client": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.426\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
