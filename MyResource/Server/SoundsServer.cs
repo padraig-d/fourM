@@ -1,7 +1,5 @@
 ﻿using CitizenFX.Core;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MyResource.Server
 {
