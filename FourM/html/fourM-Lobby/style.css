@@ -18,6 +18,9 @@ body {
     padding: 0;
     padding-top: 1%;
     flex: 5;
+    display:flex;
+    flex-flow: row;
+    flex-grow: 1;
 }
 
 h1 {
@@ -67,14 +70,6 @@ th {
     font-weight: 200;
 }
 
-.gamemode-settings-key {
-    text-align: right;
-}
-
-.gamemode-settings-value {
-    text-align: left;
-}
-
 ul {
     color: white;
     padding-left: 0;
@@ -84,26 +79,22 @@ ul {
     padding-top: 0;
     width: 35%;
     display: inline-block;
+    flex: 1;
 }
 
 .right-pane-container {
     padding-top: 0;
     width: 35%;
     float: right;
+    display: flex;
     flex-flow: column;
-}
-
-.gamemode-settings-list > li {
-    padding: 7px;
-    font-size: 28px;
-    list-style: none;
-    text-align: center;
 }
 
 .player-list > li {
     padding: 7px;
     font-size: 28px;
     list-style: none;
+    max-width: 75%;
 }
 
 .player-list > li > label > input {
@@ -181,6 +172,22 @@ ul {
     font-size: 28px;
 }
 
+.gamemode-settings-key {
+    text-align: right;
+}
+
+.gamemode-settings-value {
+    text-align: left;
+}
+
+.gamemode-settings-list > li {
+    padding: 7px;
+    font-size: 28px;
+    list-style: none;
+    text-align: center;
+}
+
+
 .gamemode-settings-table {
     margin-top: 2%;
 }
@@ -192,11 +199,13 @@ ul {
 .gamemode-description {
     margin: 0;
     padding: 0;
+    flex: 1;
 }
 
 .gamemode-settings {
     margin: 0;
     padding: 0;
+    flex: 1;
 }
 
 .client-player > span {
