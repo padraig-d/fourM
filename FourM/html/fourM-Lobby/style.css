@@ -160,16 +160,60 @@ ul {
     margin: 0;
 }
 
-.footer-content {
+.footer-content-container {
     margin: 0;
     padding-top: 0;
     margin-bottom: 5%;
     margin-top: 1%;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    display: grid;
+    justify-content: end;
 }
 
-.footer-content > h2 {
+.footer-content-container > h2 {
     margin-top: 0;
     font-size: 28px;
+}
+
+.footer-buttons-right {
+    padding-top: 0;
+    margin-top: 0;
+    float:right;
+    height: 100%;
+    grid-column: span 6 / span 6;
+    align-content: center;
+}
+
+.footer-buttons-left {
+    padding-top: 0;
+    margin-top: 0;
+    float:left;
+    height: 100%;
+    grid-column: span 6 / span 6;
+    align-content: center;
+}
+
+.footer-buttons-right > label {
+    font-size: 28px;
+    padding-right: 1%;
+    color: white;
+    float: right;
+}
+
+.footer-buttons-right > button {
+    color: white;
+    background: none;
+    border: 2px solid white;
+    font-size: 28px;
+    float:right;
+}
+
+.button-active {
+    color: black !important;
+    background: white !important;
+    border: 2px solid white !important;
+    font-size: 28px;
+    float:right;
 }
 
 .gamemode-settings-key {
@@ -186,7 +230,6 @@ ul {
     list-style: none;
     text-align: center;
 }
-
 
 .gamemode-settings-table {
     margin-top: 2%;
