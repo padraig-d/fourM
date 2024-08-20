@@ -38,9 +38,9 @@ namespace FourM.Client
             }), false);
 
 
-            RegisterCommand("tp", new Action<int, List<string>>((int source, List<string> args) =>
+            RegisterCommand("tp", new Action<int, List<object>, string>((source, args, raw) =>
             {
-                TriggerEvent("Teleport", args[0]);
+            TriggerEvent("Teleport", args);
             }), false);
 
 
