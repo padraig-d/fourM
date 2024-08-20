@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using CitizenFX.Core;
+using Mono.CSharp;
 using static CitizenFX.Core.Native.API;
 
 namespace FourM.Client
@@ -24,15 +25,26 @@ namespace FourM.Client
         {
             if (GetCurrentResourceName() != resourceName) return;
 
+            
             RegisterCommand("testcountdown", new Action<int>((source) =>
             {
                 TriggerServerEvent("fourM:Server:Play30sCountdown");
             }), false);
 
+            
             RegisterCommand("testpickup", new Action<int>((source) =>
             {
                 TriggerEvent("DropWeapon");
             }), false);
+
+
+            RegisterCommand("tp", new Action<int, List<string>>((int source, List<string> args) =>
+            {
+                TriggerEvent("Teleport", args[0]);
+            }), false);
+
+
         }
     }
 }
+
