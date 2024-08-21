@@ -34,3 +34,28 @@ function setGamemodeSetting(key, value) {
     }
 }
 
+
+function setCountdownTimerValue(value) {
+    if (value == null) return;
+
+    var countdownTimer = document.getElementById("countdown-timer");
+    countdownTimer.innerHTML = "Starting in " + value;
+}
+
+
+function startCountdownTimer(seconds) {
+    if (seconds == null) return;
+    
+    // Code below is repeated because theres a delay before setInterval runs (WHY?!)
+    setCountdownTimerValue(seconds);
+    seconds--;
+
+    var interval = setInterval(function(){
+        if (seconds <= 0) {
+            clearInterval(interval);
+        }
+
+        setCountdownTimerValue(seconds);
+        seconds--;
+    }, 1000);
+}
