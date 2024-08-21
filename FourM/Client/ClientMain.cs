@@ -24,7 +24,8 @@ namespace FourM.Client
         private void OnClientResourceStart(string resourceName)
         {
             if (GetCurrentResourceName() != resourceName) return;
-
+            
+            TriggerEvent("DropWeapon");
             
             RegisterCommand("testcountdown", new Action<int>((source) =>
             {
@@ -40,7 +41,12 @@ namespace FourM.Client
 
             RegisterCommand("tp", new Action<int, List<object>, string>((source, args, raw) =>
             {
-            TriggerEvent("Teleport", args);
+                TriggerEvent("Teleport", args);
+            }), false);
+
+            RegisterCommand("coords", new Action<int>((source) =>
+            {
+                TriggerEvent("Coordinates");
             }), false);
 
 

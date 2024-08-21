@@ -12,6 +12,7 @@ namespace FourMNameClient
         public AdminCommands()
         {
             EventHandlers["Teleport"] += new Action<List<object>>(Teleport);
+            EventHandlers["Coordinates"] += new Action(Coordinates);
         }
         private void Teleport(List<object> args) // /tp
         {	
@@ -22,13 +23,18 @@ namespace FourMNameClient
         float z = float.Parse(args[2].ToString());
 
         StartPlayerTeleport(player, x, y, z, 0, true, true, true);
-    
+		}
+
+        private void Coordinates() // /coords
+        {	
+		float x = Game.PlayerPed.Position.X;
+		float y = Game.PlayerPed.Position.Y; 
+		float z = Game.PlayerPed.Position.Z;
 		TriggerEvent("chat:addMessage", new
 			{
 				color = new[] { 255, 0, 0 },
-				args = new[] { $"it worked woooooooo!{args[0]}" }
+				args = new[] { $"X={x} Y={y} Z={z}" }
 			});	
-
 		}
     }
 }
