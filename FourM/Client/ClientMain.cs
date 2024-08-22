@@ -33,10 +33,10 @@ namespace FourM.Client
             }), false);
 
             
-            RegisterCommand("testpickup", new Action<int>((source) =>
-            {
-                TriggerEvent("DropWeapon");
-            }), false);
+            // RegisterCommand("testpickup", new Action<int>((source) =>
+            // {
+            //     TriggerEvent("DropWeapon");
+            // }), false);
 
 
             RegisterCommand("tp", new Action<int, List<object>, string>((source, args, raw) =>
