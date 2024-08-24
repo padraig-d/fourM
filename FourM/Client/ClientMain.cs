@@ -35,7 +35,7 @@ namespace FourM.Client
             
             RegisterCommand("testpickup", new Action<int>((source) =>
             {
-                TriggerEvent("DropWeapon");
+                TriggerEvent("fourM:Client:DropWeapon");
             }), false);
 
 

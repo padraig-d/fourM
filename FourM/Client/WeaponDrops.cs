@@ -10,21 +10,18 @@ namespace FourMNameClient
     {
         public WeaponDrop()
         {
-            EventHandlers["DropWeapon"] += new Action(DropWeapon);
+            EventHandlers["fourM:Client:DropWeapon"] += new Action(DropWeapon);
         }
         private void DropWeapon() // /testpickup to run in game
         {	
 		float x = Game.PlayerPed.Position.X + 2;
 		float y = Game.PlayerPed.Position.Y; 
 		float z = Game.PlayerPed.Position.Z;
-	
-								  // deagle hash
-		int pickup = CreateAmbientPickup(1817941018, x , y, z, 1, 1, 2, false, true);
-		SetBlipSprite(AddBlipForEntity(pickup), 156);
-										     // ^ pistol blip
-	
-		//ApplyForceToEntity(pickup, 3, 100, 100, 1, 100, 1, 1, 0, false, true, true, false, true);
 
+								        // deagle hash
+		int pickup = CreateAmbientPickup(1817941018, x , y, z, 1, 1, 2, false, true);
+		TriggerServerEvent("fourM:Server:AddBlip", pickup);
+		
 		TriggerEvent("chat:addMessage", new
 			{
 				color = new[] { 255, 0, 0 },
