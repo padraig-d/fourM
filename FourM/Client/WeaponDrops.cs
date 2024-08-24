@@ -25,7 +25,7 @@ namespace FourMNameClient
 		TriggerEvent("chat:addMessage", new
 			{
 				color = new[] { 255, 0, 0 },
-				args = new[] { $"Weapon Dropped!{pickup}" }
+				args = new[] { $"Weapon Dropped! Pickup: {pickup}" }
 			});	
 
 		}

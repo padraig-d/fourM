@@ -22,7 +22,7 @@ namespace FourM.Server
             TriggerClientEvent("chat:addMessage", new
 			{
 				color = new[] { 255, 0, 0 },
-				args = new[] { $"Reached Here!{pickup}" }
+				args = new[] { $"Reached Here! Pickup: {pickup}" }
 			});	
 
         }
