@@ -6,6 +6,7 @@ namespace FourM.Server
 {
     public class ServerMain : BaseScript
     {
+        public static int WeaponDrops { get; set; }
         public ServerMain()
         {
             Debug.WriteLine("Hi from FourM.Server!");

@@ -25,19 +25,15 @@ namespace FourM.Client
         {
             if (GetCurrentResourceName() != resourceName) return;
             
-            //TriggerEvent("DropWeapon");
-            
             RegisterCommand("testcountdown", new Action<int>((source) =>
             {
                 TriggerServerEvent("fourM:Server:Play30sCountdown");
             }), false);
 
-            
             RegisterCommand("testpickup", new Action<int>((source) =>
             {
-                TriggerEvent("fourM:Client:DropWeapon");
+                TriggerEvent("fourM:Client:DropWeaponCommand");
             }), false);
-
 
             RegisterCommand("tp", new Action<int, List<object>, string>((source, args, raw) =>
             {

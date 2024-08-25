@@ -2,6 +2,7 @@
     "files.exclude": {
         ".gitignore": true,
         "**/.vs": true,
-        "**/dist": true
+        "**/dist": true,
+        "/README.md": true,
     }
 }
