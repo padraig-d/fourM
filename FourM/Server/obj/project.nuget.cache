@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "Bvwkx6LzPWCs+1z5HCdDwEGZQXxX7Rd2/C3TgxEa71YqgiCFqLZqtG0L6DwMEykFF/sZLV0htCcDAU0xWl86Tw==",
+  "dgSpecHash": "i7xfS2ZxGFY=",
   "success": true,
-  "projectFilePath": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+  "projectFilePath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Visio\\.nuget\\packages\\citizenfx.core.server\\1.0.9481\\citizenfx.core.server.1.0.9481.nupkg.sha512",
-    "C:\\Users\\Visio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
-    "C:\\Users\\Visio\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+    "C:\\Users\\adame\\.nuget\\packages\\citizenfx.core.server\\1.0.9595\\citizenfx.core.server.1.0.9595.nupkg.sha512",
+    "C:\\Users\\adame\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\adame\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],
   "logs": []
 }

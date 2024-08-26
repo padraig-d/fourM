@@ -1,9 +1,19 @@
 fx_version 'bodacious'
 game 'gta5'
 
-file 'Client/bin/Release/**/*.dll'
+ui_page 'html/fourM-Lobby/index.html'
 
-client_script 'Client/bin/Release/**/*.net.dll'
+files {
+    'Client/bin/Release/**/*.dll',
+    'html/fourM-Lobby/*.js',
+    'html/fourM-Lobby/*.css',
+    'html/fourM-Lobby/*.html'
+}
+
+client_scripts {
+    'Client/bin/Release/**/*.net.dll'
+} 
+
 server_script 'Server/bin/Release/**/*.net.dll'
 
 author 'You'

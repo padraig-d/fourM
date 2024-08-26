@@ -16,3 +16,14 @@ F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.
 F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.csproj.CoreCompileInputs.cache
 F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.net.dll
 F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.net.pdb
+C:\Users\adame\git\fourM\FourM\Server\bin\Release\netstandard2.0\MyResource.Server.deps.json
+C:\Users\adame\git\fourM\FourM\Server\bin\Release\netstandard2.0\MyResource.Server.net.dll
+C:\Users\adame\git\fourM\FourM\Server\bin\Release\netstandard2.0\MyResource.Server.net.pdb
+C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.csproj.AssemblyReference.cache
+C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.AssemblyInfoInputs.cache
+C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.AssemblyInfo.cs
+C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.csproj.CoreCompileInputs.cache
+C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.sourcelink.json
+C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.net.dll
+C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.net.pdb

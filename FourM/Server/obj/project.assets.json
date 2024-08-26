@@ -2,13 +2,17 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "CitizenFX.Core.Server/1.0.9481": {
+      "CitizenFX.Core.Server/1.0.9595": {
         "type": "package",
         "compile": {
-          "lib/netstandard20/CitizenFX.Core.Server.dll": {}
+          "lib/netstandard20/CitizenFX.Core.Server.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard20/CitizenFX.Core.Server.dll": {}
+          "lib/netstandard20/CitizenFX.Core.Server.dll": {
+            "related": ".xml"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {
@@ -38,14 +42,14 @@
     }
   },
   "libraries": {
-    "CitizenFX.Core.Server/1.0.9481": {
-      "sha512": "Yik4U5u566/UzUzb+TMPv04vKrB8cJ1GadIG0QczvPTM/WUq4oMrMgYvkDUINqSZiDojRsp/PzWHMGBdoL6uzw==",
+    "CitizenFX.Core.Server/1.0.9595": {
+      "sha512": "+rCcmLmgd8fjoJ8NwxKrX1lKOkJaSFcz8pME8EDhSxrELW7Ps50L1w+XKPwrhetXFrSIAYi/i3DA32LFJkkNsQ==",
       "type": "package",
-      "path": "citizenfx.core.server/1.0.9481",
+      "path": "citizenfx.core.server/1.0.9595",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "citizenfx.core.server.1.0.9481.nupkg.sha512",
+        "citizenfx.core.server.1.0.9595.nupkg.sha512",
         "citizenfx.core.server.nuspec",
         "lib/net45/CitizenFX.Core.Server.dll",
         "lib/net45/CitizenFX.Core.Server.xml",
@@ -205,28 +209,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Visio\\.nuget\\packages\\": {}
+    "C:\\Users\\adame\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+      "projectUniqueName": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
       "projectName": "MyResource.Server",
-      "projectPath": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
-      "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
-      "outputPath": "F:\\FXServer\\scripting\\FourM\\Server\\obj\\",
+      "projectPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
+      "packagesPath": "C:\\Users\\adame\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\adame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "projectReferences": {}
         }
       },
@@ -234,10 +241,16 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
       "netstandard2.0": {
+        "targetAlias": "netstandard2.0",
         "dependencies": {
           "CitizenFX.Core.Server": {
             "target": "Package",
@@ -256,11 +269,12 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.426\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }
