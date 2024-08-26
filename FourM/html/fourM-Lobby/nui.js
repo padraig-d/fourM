@@ -1,13 +1,14 @@
 function displayNui(display) {
+    console.log(display)
     if (display) { 
-        $("html").hide(); 
+        $("body").show(); 
     } else { 
-        $("html").show(); 
+        $("body").hide(); 
     }
 }
 
 window.addEventListener('message', (event) => {
     if (event.data.type === 'display') {
-        displayNui(event.data.display)
+        displayNui(event.data.display);
     }
 });

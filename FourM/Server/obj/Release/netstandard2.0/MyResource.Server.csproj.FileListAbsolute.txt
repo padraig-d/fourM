@@ -27,3 +27,6 @@ C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Serv
 C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.sourcelink.json
 C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.net.dll
 C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.net.pdb
+C:\Users\adame\git\fourM\FourM\netstandard2.0\MyResource.Server.deps.json
+C:\Users\adame\git\fourM\FourM\netstandard2.0\MyResource.Server.net.dll
+C:\Users\adame\git\fourM\FourM\netstandard2.0\MyResource.Server.net.pdb

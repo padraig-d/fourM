@@ -4,17 +4,14 @@ game 'gta5'
 ui_page 'html/fourM-Lobby/index.html'
 
 files {
-    'Client/bin/Release/**/*.dll',
     'html/fourM-Lobby/*.js',
     'html/fourM-Lobby/*.css',
-    'html/fourM-Lobby/*.html'
+    'html/fourM-Lobby/*.html',
+    'Newtonsoft.Json.dll'
 }
 
-client_scripts {
-    'Client/bin/Release/**/*.net.dll'
-} 
-
-server_script 'Server/bin/Release/**/*.net.dll'
+client_script '*.Client.net.dll'
+server_script '*.Server.net.dll'
 
 author 'You'
 version '1.0.0'
