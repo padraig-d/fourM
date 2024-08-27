@@ -10,7 +10,7 @@ namespace FourM.Client
     public class ClientMain : BaseScript
     {
         public ClientMain()
-        {
+        {   
             Debug.WriteLine("Hi from FourM.Client!");
             EventHandlers["onClientResourceStart"] += new Action<string>(OnClientResourceStart);
         }
@@ -44,6 +44,12 @@ namespace FourM.Client
             {
                 TriggerEvent("Coordinates");
             }), false);
+
+            RegisterCommand("serverpickup", new Action<int>((source) =>
+            {
+                TriggerServerEvent("fourM:Server:DropWeapon");
+            }), false);           
+
 
 
         }
