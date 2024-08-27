@@ -13,6 +13,7 @@ namespace FourM.Server
         private void Play30sCountdownToAll()
         {
             TriggerClientEvent("fourM:Client:Play30sCountdown");
+            
         }
     }
 }

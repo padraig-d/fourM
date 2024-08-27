@@ -1,6 +1,8 @@
 using System;
+using System.Threading;
 using System.Threading.Tasks;
 using CitizenFX.Core;
+using static CitizenFX.Core.Native.API;
 
 namespace FourM.Server
 {
@@ -9,13 +11,16 @@ namespace FourM.Server
         public static int WeaponDrops { get; set; }
         public ServerMain()
         {
-            Debug.WriteLine("Hi from FourM.Server!");
+            EventHandlers["onResourceStart"] += new Action(OnClientResourceStart);
         }
-
-        [Command("hello_server")]
-        public void HelloServer()
+        public void OnClientResourceStart() 
         {
-            Debug.WriteLine("Sure, hello.");
+            TriggerClientEvent("chat:addMessage", new
+			{
+				color = new[] { 255, 0, 0 },
+				args = new[] { $"Server Started" }
+			});	
+
         }
     }
 }
