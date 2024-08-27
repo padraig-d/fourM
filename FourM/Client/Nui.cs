@@ -16,6 +16,8 @@ namespace MyResource.Client
         {
             if (GetCurrentResourceName() != resourceName) return;
             
+            Debug.WriteLine("HELLO");
+            
             DisplayNui(false);
             
             RegisterCommand("showui", new Action<int>((source) =>

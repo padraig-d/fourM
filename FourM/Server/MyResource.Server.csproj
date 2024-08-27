@@ -1,24 +1,24 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-      <TargetFramework>netstandard2.0</TargetFramework>
-      <DebugType>portable</DebugType>
-      <TargetName>$(AssemblyName).net</TargetName>
-      <DefineConstants>SERVER</DefineConstants>
-      <LangVersion>default</LangVersion>
-      <RunPostBuildEvent>Always</RunPostBuildEvent>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <DebugType>portable</DebugType>
+        <TargetName>$(AssemblyName).net</TargetName>
+        <DefineConstants>SERVER</DefineConstants>
+        <LangVersion>default</LangVersion>
+        <RunPostBuildEvent>Always</RunPostBuildEvent>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-      <OutputPath>bin\Release</OutputPath>
+        <OutputPath>bin\Release</OutputPath>
     </PropertyGroup>
-  
+
     <ItemGroup>
-      <PackageReference Include="CitizenFX.Core.Server" Version="1.0.*" />
-  
-      <Compile Include="../Shared/**/*.cs" />
+        <PackageReference Include="CitizenFX.Core.Server" Version="1.0.*" />
+
+        <Compile Include="../Shared/**/*.cs" />
     </ItemGroup>
-  
+
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-      <Exec Command="xcopy /Y &quot;$(TargetDir)*.*&quot; &quot;$(ProjectDir)..\resource\&quot;&#xA;" />
+        <Exec Command="xcopy /Y &quot;$(TargetDir)*.*&quot; &quot;$(ProjectDir)..\resource\&quot;&#xA;" />
     </Target>
 </Project>
   
