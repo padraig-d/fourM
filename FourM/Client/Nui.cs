@@ -22,6 +22,11 @@ namespace MyResource.Client
             {
                 DisplayNui(true);
             }), false);
+            
+            RegisterCommand("hideui", new Action<int>((source) =>
+            {
+                DisplayNui(false);
+            }), false);
         }
 
         private void DisplayNui(bool display)
