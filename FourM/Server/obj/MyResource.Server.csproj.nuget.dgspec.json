@@ -1,29 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj": {}
+    "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj": {}
   },
   "projects": {
-    "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj": {
+    "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+        "projectUniqueName": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
         "projectName": "MyResource.Server",
-        "projectPath": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
-        "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
-        "outputPath": "F:\\FXServer\\scripting\\FourM\\Server\\obj\\",
+        "projectPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
+        "packagesPath": "C:\\Users\\adame\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netstandard2.0": {
+            "targetAlias": "netstandard2.0",
             "projectReferences": {}
           }
         },
@@ -31,10 +34,16 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "netstandard2.0": {
+          "targetAlias": "netstandard2.0",
           "dependencies": {
             "CitizenFX.Core.Server": {
               "target": "Package",
@@ -53,11 +62,12 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.426\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -4,6 +4,11 @@
       <DebugType>portable</DebugType>
       <TargetName>$(AssemblyName).net</TargetName>
       <DefineConstants>SERVER</DefineConstants>
+      <LangVersion>default</LangVersion>
+      <RunPostBuildEvent>Always</RunPostBuildEvent>
+    </PropertyGroup>
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <OutputPath>bin\Release</OutputPath>
     </PropertyGroup>
   
     <ItemGroup>
@@ -11,5 +16,9 @@
   
       <Compile Include="../Shared/**/*.cs" />
     </ItemGroup>
+  
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="xcopy /Y &quot;$(TargetDir)*.*&quot; &quot;$(ProjectDir)..\resource\&quot;&#xA;" />
+    </Target>
 </Project>
   

@@ -14,3 +14,14 @@ F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.net.dll
 F:\FXServer\scripting\FourM\Client\bin\Release\net452\MyResource.Client.net.dll
 F:\FXServer\scripting\FourM\Client\bin\Release\net452\CitizenFX.Core.Client.dll
 F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.csproj.CopyComplete
+C:\Users\adame\git\fourM\FourM\Client\bin\Release\net452\MyResource.Client.net.dll
+C:\Users\adame\git\fourM\FourM\Client\bin\Release\net452\CitizenFX.Core.Client.dll
+C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.csproj.AssemblyReference.cache
+C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.AssemblyInfoInputs.cache
+C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.AssemblyInfo.cs
+C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.csproj.CoreCompileInputs.cache
+C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.sourcelink.json
+C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResour.4D91E1AE.Up2Date
+C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.net.dll
+C:\Users\adame\git\fourM\FourM\Client\bin\Release\net452\Newtonsoft.Json.dll
