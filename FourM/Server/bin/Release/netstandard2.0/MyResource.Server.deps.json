@@ -9,14 +9,14 @@
     ".NETStandard,Version=v2.0/": {
       "MyResource.Server/1.0.0": {
         "dependencies": {
-          "CitizenFX.Core.Server": "1.0.9595",
+          "CitizenFX.Core.Server": "1.0.9601",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
           "MyResource.Server.dll": {}
         }
       },
-      "CitizenFX.Core.Server/1.0.9595": {
+      "CitizenFX.Core.Server/1.0.9601": {
         "runtime": {
           "lib/netstandard20/CitizenFX.Core.Server.dll": {
             "assemblyVersion": "0.0.0.0",
@@ -38,12 +38,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "CitizenFX.Core.Server/1.0.9595": {
+    "CitizenFX.Core.Server/1.0.9601": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+rCcmLmgd8fjoJ8NwxKrX1lKOkJaSFcz8pME8EDhSxrELW7Ps50L1w+XKPwrhetXFrSIAYi/i3DA32LFJkkNsQ==",
-      "path": "citizenfx.core.server/1.0.9595",
-      "hashPath": "citizenfx.core.server.1.0.9595.nupkg.sha512"
+      "sha512": "sha512-M+q2fmiOJqKVm89mSsjEhoGStDzc6TCA4CxvD9OO+m0dIYr6I4vGsQGIMqYrBcYADM6O92Dzy7+zQAigxfWueg==",
+      "path": "citizenfx.core.server/1.0.9601",
+      "hashPath": "citizenfx.core.server.1.0.9601.nupkg.sha512"
     },
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
