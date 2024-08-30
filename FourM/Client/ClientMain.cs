@@ -50,7 +50,10 @@ namespace FourM.Client
                 TriggerServerEvent("fourM:Server:DropWeapon");
             }), false);           
 
-
+            RegisterCommand("pickupJSON", new Action<int>((source) =>
+            {
+                TriggerServerEvent("fourM:Server:DropWeaponJSON");
+            }), false);           
 
         }
     }

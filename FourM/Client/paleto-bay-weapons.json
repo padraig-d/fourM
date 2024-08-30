@@ -1,0 +1,29 @@
+[
+    {
+        "id" : 1,
+        "x" : -442,
+        "y" : 6057,
+        "z" : 32,
+        "name" : "PICKUP_WEAPON_PISTOL",
+        "ammo" : 90,
+        "blip" : 156
+    },
+    {
+        "id" : 2,
+        "x" : 392,
+        "y" : 6043,
+        "z" : 32,
+        "name" : "PICKUP_WEAPON_ASSAULTRIFLE",
+        "ammo" : 120,
+        "blip" : 150
+    },
+    {
+        "id" : 3,
+        "x" : -400,
+        "y" : 6089,
+        "z" : 32,
+        "name" : "PICKUP_WEAPON_SMG",
+        "ammo" : 120,
+        "blip" : 159
+    }
+]

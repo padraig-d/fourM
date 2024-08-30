@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.5.2": {
-      "CitizenFX.Core.Client/1.0.9601": {
+      "CitizenFX.Core.Client/1.0.9655": {
         "type": "package",
         "compile": {
           "lib/net45/CitizenFX.Core.Client.dll": {
@@ -18,14 +18,14 @@
     }
   },
   "libraries": {
-    "CitizenFX.Core.Client/1.0.9601": {
-      "sha512": "AC9wAA8FPAivPDz9747JnLvlFJH15YjuJTYCaWmrmIkv20Ija+OSIRZgB2bkF5B6Lq7Un3w1UBkQuC5zXNEi0Q==",
+    "CitizenFX.Core.Client/1.0.9655": {
+      "sha512": "Es6Stxs5SHnMmY9I3gvUdj0myxHurpEafllOo+BTKY2yGVkBwZsH6YO+6UoflgSviRo7j4WuaI0ysxpeHpzQmg==",
       "type": "package",
-      "path": "citizenfx.core.client/1.0.9601",
+      "path": "citizenfx.core.client/1.0.9655",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "citizenfx.core.client.1.0.9601.nupkg.sha512",
+        "citizenfx.core.client.1.0.9655.nupkg.sha512",
         "citizenfx.core.client.nuspec",
         "lib/net45/CitizenFX.Core.Client.dll",
         "lib/net45/CitizenFX.Core.Client.xml"
@@ -38,19 +38,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adame\\.nuget\\packages\\": {}
+    "C:\\Users\\Visio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\MyResource.Client.csproj",
+      "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
       "projectName": "MyResource.Client",
-      "projectPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\MyResource.Client.csproj",
-      "packagesPath": "C:\\Users\\adame\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\obj\\",
+      "projectPath": "F:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
+      "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
+      "outputPath": "F:\\FXServer\\scripting\\FourM\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
