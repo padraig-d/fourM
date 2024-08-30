@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using Newtonsoft.Json;
 using System.Collections.Generic;
 using CitizenFX.Core;
 using CitizenFX.Core.Native;
@@ -73,7 +75,22 @@ namespace FourMNameClient
 
 		private void DropWeaponJSON()
 		{
+			JsonSerializer serializer = new JsonSerializer();
+			using (FileStream s = File.Open("bigfile.json", FileMode.Open))
+			using (StreamReader sr = new StreamReader(s))
+			using (JsonReader reader = new JsonTextReader(sr))
+			{
+				while (reader.Read())
+				{
+					// https://stackoverflow.com/questions/43747477/how-to-parse-huge-json-file-as-stream-in-json-net
+					// TODO: figure out reader.ReadAsync(), make sure it doesnt break UI
+					// Start reading the json file
+					if (reader.TokenType == JsonToken.StartObject)
+					{
 
+					}
+				}
+			}
 		}
 
 
