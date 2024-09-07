@@ -4,7 +4,7 @@
   "success": true,
   "projectFilePath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\adame\\.nuget\\packages\\citizenfx.core.server\\1.0.9601\\citizenfx.core.server.1.0.9601.nupkg.sha512",
+    "C:\\Users\\adame\\.nuget\\packages\\citizenfx.core.server\\1.0.9780\\citizenfx.core.server.1.0.9780.nupkg.sha512",
     "C:\\Users\\adame\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\adame\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
   ],

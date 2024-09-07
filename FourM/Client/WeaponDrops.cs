@@ -34,9 +34,15 @@ namespace FourMNameClient
 
 		}
 
-		private void DropWeapon()
-        {	
-			int pickup1 = ObjToNet(CreateAmbientPickup(1817941018, 13 , 12, 71, 1, 1, 2, false, true));
+		private async void DropWeapon()
+        {
+            RequestModel(1817941018);
+            while (HasModelLoaded(1817941018))
+            {
+                await Delay(100);
+            }
+
+            int pickup1 = ObjToNet(CreateAmbientPickup(1817941018, 13 , 12, 71, 1, 1, 2, false, true));
 			TriggerServerEvent("fourM:Server:AddBlip", pickup1);
 
 			int pickup2 = ObjToNet(CreateAmbientPickup(1817941018, 7 , 28, 71, 1, 1, 2, false, true));

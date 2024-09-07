@@ -18,6 +18,7 @@ namespace FourM.Server
         private void AddBlip(int pickup)
         {
             int networkPickup = NetworkGetEntityFromNetworkId(pickup);
+            Debug.WriteLine(networkPickup.ToString());
             SetBlipSprite(AddBlipForEntity(networkPickup), 156);
         }
 
