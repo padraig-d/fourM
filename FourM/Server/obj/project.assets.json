@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "CitizenFX.Core.Server/1.0.9655": {
+      "CitizenFX.Core.Server/1.0.9601": {
         "type": "package",
         "compile": {
           "lib/netstandard20/CitizenFX.Core.Server.dll": {
@@ -42,14 +42,14 @@
     }
   },
   "libraries": {
-    "CitizenFX.Core.Server/1.0.9655": {
-      "sha512": "eLmZu+thdKdcgBtBAJpWk7eyUybGJ8P4YNmyeFkzt987ql6V88coA6rw+5CN9BYQyQQ2nLI3upOuEYUWiE/BJg==",
+    "CitizenFX.Core.Server/1.0.9601": {
+      "sha512": "M+q2fmiOJqKVm89mSsjEhoGStDzc6TCA4CxvD9OO+m0dIYr6I4vGsQGIMqYrBcYADM6O92Dzy7+zQAigxfWueg==",
       "type": "package",
-      "path": "citizenfx.core.server/1.0.9655",
+      "path": "citizenfx.core.server/1.0.9601",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "citizenfx.core.server.1.0.9655.nupkg.sha512",
+        "citizenfx.core.server.1.0.9601.nupkg.sha512",
         "citizenfx.core.server.nuspec",
         "lib/net45/CitizenFX.Core.Server.dll",
         "lib/net45/CitizenFX.Core.Server.xml",
@@ -209,19 +209,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Visio\\.nuget\\packages\\": {}
+    "C:\\Users\\adame\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+      "projectUniqueName": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
       "projectName": "MyResource.Server",
-      "projectPath": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
-      "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
-      "outputPath": "F:\\FXServer\\scripting\\FourM\\Server\\obj\\",
+      "projectPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
+      "packagesPath": "C:\\Users\\adame\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\adame\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

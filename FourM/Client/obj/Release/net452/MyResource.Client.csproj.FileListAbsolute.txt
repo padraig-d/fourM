@@ -6,12 +6,14 @@ F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.Ass
 F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.csproj.CoreCompileInputs.cache
 F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.csproj.CopyComplete
 F:\FXServer\scripting\MyResource\Client\obj\Release\net452\MyResource.Client.net.dll
+F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.csprojAssemblyReference.cache
 F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.AssemblyInfoInputs.cache
 F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.AssemblyInfo.cs
 F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.csproj.CoreCompileInputs.cache
 F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.net.dll
 F:\FXServer\scripting\FourM\Client\bin\Release\net452\MyResource.Client.net.dll
 F:\FXServer\scripting\FourM\Client\bin\Release\net452\CitizenFX.Core.Client.dll
+F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.csproj.CopyComplete
 C:\Users\adame\git\fourM\FourM\Client\bin\Release\net452\MyResource.Client.net.dll
 C:\Users\adame\git\fourM\FourM\Client\bin\Release\net452\CitizenFX.Core.Client.dll
 C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.csproj.AssemblyReference.cache
@@ -23,8 +25,3 @@ C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.sourc
 C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResour.4D91E1AE.Up2Date
 C:\Users\adame\git\fourM\FourM\Client\obj\Release\net452\MyResource.Client.net.dll
 C:\Users\adame\git\fourM\FourM\Client\bin\Release\net452\Newtonsoft.Json.dll
-F:\FXServer\scripting\FourM\Client\bin\Release\net452\Newtonsoft.Json.dll
-F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.csproj.AssemblyReference.cache
-F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.GeneratedMSBuildEditorConfig.editorconfig
-F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResource.Client.sourcelink.json
-F:\FXServer\scripting\FourM\Client\obj\Release\net452\MyResour.4D91E1AE.Up2Date

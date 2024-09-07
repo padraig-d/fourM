@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj": {}
+    "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj": {}
   },
   "projects": {
-    "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj": {
+    "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+        "projectUniqueName": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
         "projectName": "MyResource.Server",
-        "projectPath": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
-        "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
-        "outputPath": "F:\\FXServer\\scripting\\FourM\\Server\\obj\\",
+        "projectPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
+        "packagesPath": "C:\\Users\\adame\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adame\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

@@ -1,9 +1,6 @@
 ﻿using System;
-using System.IO;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using CitizenFX.Core;
-using CitizenFX.Core.Native;
 using FourM.Client;
 using Mono.CompilerServices.SymbolWriter;
 using static CitizenFX.Core.Native.API;
@@ -12,28 +9,15 @@ namespace FourMNameClient
 {
     public class WeaponDrop : BaseScript
     {
-		public class WeaponPickup
-		{
-			string name;
-			float x;
-			float y;
-			float z;
-			int ammo;
-			int blip;
-			uint GetHash() {
-				uint hash = (uint) GetHashKey(this.name);
-				return hash;
-			}
-		}
         public WeaponDrop()
-        {		
+        {
+			// EventHandlers["onClientResourceStart"] += new Action(DropWeapon);			
             EventHandlers["fourM:Client:DropWeapon"] += new Action(DropWeapon);
 			EventHandlers["fourM:Client:DropWeaponCommand"] += new Action(DropWeaponCommand);
-			EventHandlers["fourM:Client:DropWeaponJSON"] += new Action(DropWeaponJSON);
         }
         private void DropWeaponCommand() // /testpickup to run in game
         {	
-			
+
 			float x = Game.PlayerPed.Position.X + 2;
 			float y = Game.PlayerPed.Position.Y; 
 			float z = Game.PlayerPed.Position.Z;
@@ -72,27 +56,6 @@ namespace FourMNameClient
 			});	
 
 		}
-
-		private void DropWeaponJSON()
-		{
-			JsonSerializer serializer = new JsonSerializer();
-			using (FileStream s = File.Open("bigfile.json", FileMode.Open))
-			using (StreamReader sr = new StreamReader(s))
-			using (JsonReader reader = new JsonTextReader(sr))
-			{
-				while (reader.Read())
-				{
-					// https://stackoverflow.com/questions/43747477/how-to-parse-huge-json-file-as-stream-in-json-net
-					// TODO: figure out reader.ReadAsync(), make sure it doesnt break UI
-					// Start reading the json file
-					if (reader.TokenType == JsonToken.StartObject)
-					{
-
-					}
-				}
-			}
-		}
-
 
     }
 }

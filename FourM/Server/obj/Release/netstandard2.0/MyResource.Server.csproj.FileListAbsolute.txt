@@ -10,6 +10,7 @@ F:\FXServer\scripting\MyResource\Server\obj\Release\netstandard2.0\MyResource.Se
 F:\FXServer\scripting\FourM\Server\bin\Release\netstandard2.0\MyResource.Server.deps.json
 F:\FXServer\scripting\FourM\Server\bin\Release\netstandard2.0\MyResource.Server.net.dll
 F:\FXServer\scripting\FourM\Server\bin\Release\netstandard2.0\MyResource.Server.net.pdb
+F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.csprojAssemblyReference.cache
 F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.AssemblyInfoInputs.cache
 F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.AssemblyInfo.cs
 F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.csproj.CoreCompileInputs.cache
@@ -29,6 +30,3 @@ C:\Users\adame\git\fourM\FourM\Server\obj\Release\netstandard2.0\MyResource.Serv
 C:\Users\adame\git\fourM\FourM\netstandard2.0\MyResource.Server.deps.json
 C:\Users\adame\git\fourM\FourM\netstandard2.0\MyResource.Server.net.dll
 C:\Users\adame\git\fourM\FourM\netstandard2.0\MyResource.Server.net.pdb
-F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.csproj.AssemblyReference.cache
-F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.GeneratedMSBuildEditorConfig.editorconfig
-F:\FXServer\scripting\FourM\Server\obj\Release\netstandard2.0\MyResource.Server.sourcelink.json
