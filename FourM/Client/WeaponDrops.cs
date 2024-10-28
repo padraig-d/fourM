@@ -10,25 +10,16 @@ using static CitizenFX.Core.Native.API;
 
 namespace FourMNameClient
 {
-    public class WeaponDrop : BaseScript
+    public class WeaponDrops : BaseScript
     {
-		public class Weapon {
-			public string name;
-			public int id;
-        	public int x;
-			public int y;
-			public int z;
-			public int pickup;
-			public int ammo;
-			public int blip;
-		}
-        public WeaponDrop()
+        public WeaponDrops()
         {
 			// EventHandlers["onClientResourceStart"] += new Action(DropWeapon);			
             EventHandlers["fourM:Client:DropWeapon"] += new Action(DropWeapon);
 			EventHandlers["fourM:Client:DropWeaponCommand"] += new Action(DropWeaponCommand);
 			EventHandlers["fourM:Client:JSONDrop"] += new Action(JSONDrop);
         }
+
         private void DropWeaponCommand() // /testpickup to run in game
         {	
 
@@ -79,28 +70,46 @@ namespace FourMNameClient
 
 		private async void JSONDrop()
         {
-			using (StreamReader file = File.OpenText("paleto-bay-weapons.json"))
-			using (JsonTextReader reader = new JsonTextReader(file))
+			IList<WeaponDrop> listWeaponDrop = new List<WeaponDrop>();
+			string file = LoadResourceFile("fourM", "paleto-bay-weapons.json");
+			dynamic weaponDropsFile = JsonConvert.DeserializeObject(file);
+
+			try
 			{
-				
-			}
+				JArray weaponDropsJArray = (JArray)weaponDropsFile["weaponDrops"];
+				foreach (dynamic weaponDrop in weaponDropsJArray)
+				{
+					listWeaponDrop.Add(new WeaponDrop(
+                        Convert.ToString(weaponDrop["name"]),
+                        Convert.ToInt32(weaponDrop["id"]),
+                        Convert.ToDouble(weaponDrop["x"]),
+                        Convert.ToDouble(weaponDrop["y"]),
+                        Convert.ToDouble(weaponDrop["z"]),
+                        Convert.ToUInt32(weaponDrop["pickup"]),
+                        Convert.ToInt32(weaponDrop["ammo"]),
+                        Convert.ToInt32(weaponDrop["blip"])
+                        ));
+				}
 
-			
+				foreach (WeaponDrop weaponDrop in listWeaponDrop)
+				{
+                    RequestModel(weaponDrop.Pickup);
+                    while (HasModelLoaded(weaponDrop.Pickup))
+                    {
+                        await Delay(100);
+                    }
 
-            RequestModel(1817941018); // can delete this 
-            while (HasModelLoaded(1817941018))
-            {
-                await Delay(100);
+                    int pickup = ObjToNet(CreateAmbientPickup(weaponDrop.Pickup, weaponDrop.X, weaponDrop.Y, weaponDrop.Z, 1, 1, 2, false, true));
+                    TriggerServerEvent("fourM:Server:AddBlip", pickup);
+                }
+
             }
-
-
-			TriggerEvent("chat:addMessage", new
+			catch (Exception ex)
 			{
-				color = new[] { 255, 0, 0 },
-				args = new[] { $"DropWeapon() ran" } // debugging shit
-			});	
-
+				Debug.WriteLine("Failed to read file: " + ex.Message);
+			}
 		}
 
     }
 }
+
