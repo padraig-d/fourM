@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "qpuyh0mRZIw=",
+  "dgSpecHash": "lFyugYAYB8E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\MyResource.Client.csproj",
+  "projectFilePath": "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\adame\\.nuget\\packages\\citizenfx.core.client\\1.0.9780\\citizenfx.core.client.1.0.9780.nupkg.sha512",
-    "C:\\Users\\adame\\.nuget\\packages\\citizenfx.framework.client\\0.2.3\\citizenfx.framework.client.0.2.3.nupkg.sha512"
+    "C:\\Users\\Visio\\.nuget\\packages\\citizenfx.core.client\\1.0.10230\\citizenfx.core.client.1.0.10230.nupkg.sha512",
+    "C:\\Users\\Visio\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "C:\\Users\\Visio\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net452\\1.0.3\\microsoft.netframework.referenceassemblies.net452.1.0.3.nupkg.sha512",
+    "C:\\Users\\Visio\\.nuget\\packages\\citizenfx.framework.client\\0.2.3\\citizenfx.framework.client.0.2.3.nupkg.sha512"
   ],
   "logs": []
 }

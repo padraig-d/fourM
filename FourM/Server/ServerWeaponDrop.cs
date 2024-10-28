@@ -13,6 +13,7 @@ namespace FourM.Server
             EventHandlers["fourM:Server:AddBlip"] += new Action<int>(AddBlip);
             //EventHandlers["OnResourceStart"] += new Action(DropWeapon);
             EventHandlers["fourM:Server:DropWeapon"] += new Action(DropWeapon);
+            EventHandlers["fourM:Server:JSONDrop"] += new Action(JSONDrop);
         }
 
         private void AddBlip(int pickup)
@@ -26,6 +27,12 @@ namespace FourM.Server
         {   
             Player player = Players.First();
             player.TriggerEvent("fourM:Client:DropWeapon");
+        }
+
+        private void JSONDrop() // /jsondrop
+        {   
+            Player player = Players.First();
+            player.TriggerEvent("fourM:Client:JSONDrop");
         }
     }
 }

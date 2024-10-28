@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\MyResource.Client.csproj": {}
+    "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\MyResource.Client.csproj": {
+    "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\MyResource.Client.csproj",
+        "projectUniqueName": "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
         "projectName": "MyResource.Client",
-        "projectPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\MyResource.Client.csproj",
-        "packagesPath": "C:\\Users\\adame\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Client\\obj\\",
+        "projectPath": "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
+        "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
+        "outputPath": "f:\\FXServer\\scripting\\FourM\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\adame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +22,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -48,6 +49,12 @@
             "CitizenFX.Core.Client": {
               "target": "Package",
               "version": "[1.0.*, )"
+            },
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )",
+              "autoReferenced": true
             }
           },
           "downloadDependencies": [
@@ -61,7 +68,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

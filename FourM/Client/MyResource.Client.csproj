@@ -10,10 +10,9 @@
         <Compile Include="../Shared/**/*.cs" />
     </ItemGroup>
     <ItemGroup>
-        <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-            <SpecificVersion>False</SpecificVersion>
-            <HintPath>$(ProjectDir)..\Newtonsoft.Json.dll</HintPath>
-        </Reference>
+      <Reference Include="Newtonsoft.Json">
+        <HintPath>..\Newtonsoft.Json.dll</HintPath>
+      </Reference>
     </ItemGroup>
     <Target Name="PostBuild" AfterTargets="PostBuildEvent">
         <Exec Command="xcopy /Y &quot;$(TargetDir)*.*&quot; &quot;$(ProjectDir)..\resource\&quot;&#xA;xcopy /Y &quot;$(ProjectDir)..\fxmanifest.lua&quot; &quot;$(ProjectDir)..\resource\&quot;&#xA;xcopy /Y /E /I &quot;$(ProjectDir)..\html\*&quot; &quot;$(ProjectDir)..\resource\html\&quot;&#xA;" />

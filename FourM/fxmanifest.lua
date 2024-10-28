@@ -8,6 +8,7 @@ files {
     'html/fourM-Lobby/*.css',
     'html/fourM-Lobby/*.html',
     'Newtonsoft.Json.dll'
+    'paleto-bay-weapons.json'
 }
 
 client_script '*.Client.net.dll'

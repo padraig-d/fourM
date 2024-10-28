@@ -1,28 +1,31 @@
 [
     {
+        "name" : "BERRETTA",
         "id" : 1,
         "x" : -442,
         "y" : 6057,
         "z" : 32,
-        "name" : "PICKUP_WEAPON_PISTOL",
+        "pickup" : 4189041807,
         "ammo" : 90,
         "blip" : 156
     },
     {
+        "name" : "AK47",
         "id" : 2,
         "x" : 392,
         "y" : 6043,
         "z" : 32,
-        "name" : "PICKUP_WEAPON_ASSAULTRIFLE",
+        "pickup" : 4080829360,
         "ammo" : 120,
         "blip" : 150
     },
     {
+        "name" : "MP5",
         "id" : 3,
         "x" : -400,
         "y" : 6089,
         "z" : 32,
-        "name" : "PICKUP_WEAPON_SMG",
+        "pickup" : 978070226,
         "ammo" : 120,
         "blip" : 159
     }

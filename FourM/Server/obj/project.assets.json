@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETStandard,Version=v2.0": {
-      "CitizenFX.Core.Server/1.0.9780": {
+      "CitizenFX.Core.Server/1.0.10230": {
         "type": "package",
         "compile": {
           "lib/netstandard20/CitizenFX.Core.Server.dll": {
@@ -42,14 +42,14 @@
     }
   },
   "libraries": {
-    "CitizenFX.Core.Server/1.0.9780": {
-      "sha512": "8Zw0UxLEoaNAPytSg1vBpbL2BmVr4fY+OIIPg1frLbvIm5vm9Zy7BNst8sQCN9DsgQZ+8kdh8p0G2NQ09eZkQg==",
+    "CitizenFX.Core.Server/1.0.10230": {
+      "sha512": "B92x/0kdRQkTzMzxPToDlNdY3zvVCWESfvja9bwi6xILccVVuQejWzBP4hKaMAgJ2AFFPo2AVuibs09c4Zto4g==",
       "type": "package",
-      "path": "citizenfx.core.server/1.0.9780",
+      "path": "citizenfx.core.server/1.0.10230",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "citizenfx.core.server.1.0.9780.nupkg.sha512",
+        "citizenfx.core.server.1.0.10230.nupkg.sha512",
         "citizenfx.core.server.nuspec",
         "lib/net45/CitizenFX.Core.Server.dll",
         "lib/net45/CitizenFX.Core.Server.xml",
@@ -209,26 +209,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adame\\.nuget\\packages\\": {}
+    "C:\\Users\\Visio\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
+      "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
       "projectName": "MyResource.Server",
-      "projectPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\MyResource.Server.csproj",
-      "packagesPath": "C:\\Users\\adame\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\adame\\git\\fourM\\FourM\\Server\\obj\\",
+      "projectPath": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+      "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
+      "outputPath": "F:\\FXServer\\scripting\\FourM\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\adame\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -274,7 +273,7 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }
