@@ -70,28 +70,28 @@ namespace FourMNameClient
 
 		private async void JSONDrop()
         {
-			IList<WeaponDrop> listWeaponDrop = new List<WeaponDrop>();
+			IList<WeaponPickup> listWeaponDrop = new List<WeaponPickup>();
 			string file = LoadResourceFile("fourM", "paleto-bay-weapons.json");
-			dynamic weaponDropsFile = JsonConvert.DeserializeObject(file);
+			dynamic weaponPickupsFile = JsonConvert.DeserializeObject(file);
 
 			try
 			{
-				JArray weaponDropsJArray = (JArray)weaponDropsFile["weaponDrops"];
-				foreach (dynamic weaponDrop in weaponDropsJArray)
+				JArray weaponPickupsJArray = (JArray)weaponPickupsFile["weaponDrops"];
+				foreach (dynamic weaponPickup in weaponPickupsJArray)
 				{
-					listWeaponDrop.Add(new WeaponDrop(
-                        Convert.ToString(weaponDrop["name"]),
-                        Convert.ToInt32(weaponDrop["id"]),
-                        Convert.ToDouble(weaponDrop["x"]),
-                        Convert.ToDouble(weaponDrop["y"]),
-                        Convert.ToDouble(weaponDrop["z"]),
-                        Convert.ToUInt32(weaponDrop["pickup"]),
-                        Convert.ToInt32(weaponDrop["ammo"]),
-                        Convert.ToInt32(weaponDrop["blip"])
+					listWeaponDrop.Add(new WeaponPickup(
+                        Convert.ToString(weaponPickup["name"]),
+                        Convert.ToInt32(weaponPickup["id"]),
+                        Convert.ToDouble(weaponPickup["x"]),
+                        Convert.ToDouble(weaponPickup["y"]),
+                        Convert.ToDouble(weaponPickup["z"]),
+                        Convert.ToUInt32(weaponPickup["pickup"]),
+                        Convert.ToInt32(weaponPickup["ammo"]),
+                        Convert.ToInt32(weaponPickup["blip"])
                         ));
 				}
 
-				foreach (WeaponDrop weaponDrop in listWeaponDrop)
+				foreach (WeaponPickup weaponDrop in listWeaponDrop)
 				{
                     RequestModel(weaponDrop.Pickup);
                     while (HasModelLoaded(weaponDrop.Pickup))

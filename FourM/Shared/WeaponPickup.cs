@@ -1,6 +1,6 @@
 using System;
 
-public class WeaponDrop
+public class WeaponPickup
 {
     private string name;
     private int id;
@@ -11,7 +11,7 @@ public class WeaponDrop
     private int ammo;
     private int blip;
 
-    public WeaponDrop(string name, int id, float x, float y, float z, int pickup, int ammo, int blip)
+    public WeaponPickup(string name, int id, float x, float y, float z, UInt32 pickup, int ammo, int blip)
     {
         this.name = name;
         this.id = id;
