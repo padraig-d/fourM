@@ -7,7 +7,7 @@ files {
     'html/fourM-Lobby/*.js',
     'html/fourM-Lobby/*.css',
     'html/fourM-Lobby/*.html',
-    'Newtonsoft.Json.dll'
+    'Newtonsoft.Json.dll',
     'paleto-bay-weapons.json'
 }
 
