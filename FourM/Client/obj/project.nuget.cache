@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lFyugYAYB8E=",
+  "dgSpecHash": "/ZQ4nJl7Bow=",
   "success": true,
-  "projectFilePath": "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
+  "projectFilePath": "C:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Visio\\.nuget\\packages\\citizenfx.core.client\\1.0.10230\\citizenfx.core.client.1.0.10230.nupkg.sha512",
     "C:\\Users\\Visio\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.3\\microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",

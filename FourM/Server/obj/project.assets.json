@@ -214,11 +214,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+      "projectUniqueName": "C:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
       "projectName": "MyResource.Server",
-      "projectPath": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+      "projectPath": "C:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
       "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
-      "outputPath": "F:\\FXServer\\scripting\\FourM\\Server\\obj\\",
+      "outputPath": "C:\\FXServer\\scripting\\FourM\\Server\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -229,7 +229,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

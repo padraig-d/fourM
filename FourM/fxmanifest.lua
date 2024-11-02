@@ -1,4 +1,4 @@
-fx_version 'bodacious'
+fx_version 'cerulean'
 game 'gta5'
 
 ui_page 'html/fourM-Lobby/index.html'
@@ -8,7 +8,7 @@ files {
     'html/fourM-Lobby/*.css',
     'html/fourM-Lobby/*.html',
     'Newtonsoft.Json.dll',
-    'paleto-bay-weapons.json'
+    'weapondrops.json'
 }
 
 client_script '*.Client.net.dll'
