@@ -9,10 +9,12 @@ function displayNui(display) {
 
 window.addEventListener('message', (event) => {
     let data = event.data;
-    
+
     if (data.type === 'display') {
         displayNui(event.data.display);
-    } else if (event.data.action === 'setLocalPlayerName') {
+    } else if (data.action === 'setLocalPlayerName') {
         setLocalPlayerName(data.pName);
+    } else if (data.action === 'updatePlayerList') {
+        updatePlayerList(data.playerList);
     }
 });
