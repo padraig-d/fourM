@@ -71,7 +71,8 @@ namespace FourMNameClient
 		private async void JSONDrop()
         {
 			IList<WeaponPickup> listWeaponDrop = new List<WeaponPickup>();
-			string file = LoadResourceFile("fourM", "paleto-bay-weapons.json");
+			string file = LoadResourceFile(GetCurrentResourceName(), "weapondrops.json");
+			Debug.WriteLine("file contents: " + file);
 			dynamic weaponPickupsFile = JsonConvert.DeserializeObject(file);
 
 			try

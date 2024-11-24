@@ -1,4 +1,4 @@
-fx_version 'bodacious'
+fx_version 'cerulean'
 game 'gta5'
 
 ui_page 'html/fourM-Lobby/index.html'

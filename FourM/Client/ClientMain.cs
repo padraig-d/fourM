@@ -48,8 +48,8 @@ namespace FourM.Client
             RegisterCommand("serverpickup", new Action<int>((source) =>
             {
                 TriggerServerEvent("fourM:Server:DropWeapon");
-            }), false);           
-            
+            }), false);
+
             RegisterCommand("jsondrop", new Action<int>((source) =>
             {
                 TriggerServerEvent("fourM:Server:JSONDrop");
