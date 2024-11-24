@@ -23,6 +23,13 @@ namespace MyResource.Client
             RegisterCommand("showui", new Action<int>((source) =>
             {
                 DisplayNui(true);
+                SendNuiMessage(
+                    JsonConvert.SerializeObject(new
+                        {
+                            action = "setLocalPlayerName",
+                            pName = GetPlayerName(PlayerId())
+                        })
+                    );
             }), false);
             
             RegisterCommand("hideui", new Action<int>((source) =>

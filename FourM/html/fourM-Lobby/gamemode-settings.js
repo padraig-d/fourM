@@ -6,8 +6,8 @@ function getGameOptions() {
     for (i = 0; i < rowLength; i++) {
         var gamemodeSettingCells = gamemodeSettingsTable.rows.item(i).cells;
 
-        var key = gamemodeSettingCells.item(0).innerHTML;
-        var value = gamemodeSettingCells.item(1).innerHTML;
+        var key = gamemodeSettingCells.item(0).textContent;
+        var value = gamemodeSettingCells.item(1).textContent;
 
         gamemodeSettings[key] = value;
     }
@@ -25,11 +25,11 @@ function setGamemodeSetting(key, value) {
     for (i = 0; i < rowLength; i++) {
         var gamemodeSettingCells = gamemodeSettingsTable.rows.item(i).cells;
 
-        var currKey = gamemodeSettingCells.item(0).innerHTML;
+        var currKey = gamemodeSettingCells.item(0).textContent;
         var currValue = gamemodeSettingCells.item(1);
 
         if (currKey == key) {
-            currValue.innerHTML = value;
+            currValue.textContent = value;
         }
     }
 }
@@ -39,7 +39,7 @@ function setCountdownTimerValue(value) {
     if (value == null) return;
 
     var countdownTimer = document.getElementById("countdown-timer");
-    countdownTimer.innerHTML = "Starting in " + value;
+    countdownTimer.textContent = "Starting in " + value;
 }
 
 
