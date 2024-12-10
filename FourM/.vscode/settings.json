@@ -7,7 +7,8 @@
         "**/resource": true,
         "Newtonsoft.Json.dll": true,
         "**/Client/Client.sln": true,
-        "**/Client/MyResource.Client.csproj": false,
+        "**/Client/MyResource.Client.csproj": true,
         "**/Server/MyResource.Server.csproj": true,
+        "**/MyResource.sln": true,
     }
 }
