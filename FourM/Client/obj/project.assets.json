@@ -384,23 +384,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\adame\\.nuget\\packages\\": {},
+    "C:\\Users\\Visio\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
+      "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
       "projectName": "MyResource.Client",
-      "projectPath": "C:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
+      "projectPath": "F:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
       "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
-      "outputPath": "C:\\FXServer\\scripting\\FourM\\Client\\obj\\",
+      "outputPath": "F:\\FXServer\\scripting\\FourM\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\adame\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Visio\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -425,9 +425,8 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+        "auditMode": "direct"
+      }
     },
     "frameworks": {
       "net452": {
@@ -455,7 +454,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -10,6 +10,17 @@ using static CitizenFX.Core.Native.API;
 
 namespace FourMNameClient
 {
+
+	public class WeaponPickupHelper : BaseScript {
+		public void createPickup(WeaponPickup weapon) {
+
+			int pickup = ObjToNet(CreateAmbientPickup(weapon.Hash, weapon.X , weapon.Y, weapon.Z, 1, weapon.Ammo, 2, false, true));
+			weapon.Pickup = pickup;
+
+			TriggerServerEvent("fourM:Server:AddBlip", weapon.Pickup, weapon.Blip);
+		}
+	}
+
     public class WeaponDrops : BaseScript
     {
         public WeaponDrops()
@@ -22,24 +33,23 @@ namespace FourMNameClient
 
         private void DropWeaponCommand() // /testpickup to run in game
         {	
-
 			float x = Game.PlayerPed.Position.X + 2;
 			float y = Game.PlayerPed.Position.Y; 
 			float z = Game.PlayerPed.Position.Z;
 
-														// deagle hash
-			int pickup = ObjToNet(CreateAmbientPickup(1817941018, x , y, z, 1, 1, 2, false, true));
-			TriggerServerEvent("fourM:Server:AddBlip", pickup);
+			WeaponPickupHelper helper = new WeaponPickupHelper();
+			WeaponPickup testWeapon = new WeaponPickup("deagle", 1, x, y, z, 1817941018, 9, 156);
 			
+			helper.createPickup(testWeapon);
+
 			TriggerEvent("chat:addMessage", new
 				{
 					color = new[] { 255, 0, 0 },
-					args = new[] { $"Weapon Dropped! Pickup: {pickup}" }
+					args = new[] { $"Weapon Dropped! Pickup: {testWeapon.Pickup}" }
 				});	
-
 		}
 
-		private async void DropWeapon()
+		private async void DropWeapon()  // /serverpickup
         {
             RequestModel(1817941018);
             while (HasModelLoaded(1817941018))
@@ -48,16 +58,16 @@ namespace FourMNameClient
             }
 
             int pickup1 = ObjToNet(CreateAmbientPickup(978070226, 13 , 12, 71, 1, 1, 2, false, true));
-			TriggerServerEvent("fourM:Server:AddBlip", pickup1);
+			TriggerServerEvent("fourM:Server:AddBlip", pickup1, 156);
 
 			int pickup2 = ObjToNet(CreateAmbientPickup(1817941018, 7 , 28, 71, 1, 1, 2, false, true));
-			TriggerServerEvent("fourM:Server:AddBlip", pickup2);
+			TriggerServerEvent("fourM:Server:AddBlip", pickup2, 156);
 
 			int pickup3 = ObjToNet(CreateAmbientPickup(1817941018, 40 , 17, 70, 1, 1, 2, false, true));
-			TriggerServerEvent("fourM:Server:AddBlip", pickup3);	
+			TriggerServerEvent("fourM:Server:AddBlip", pickup3, 156);	
 
 			int pickup4 = ObjToNet(CreateAmbientPickup(1817941018, 53 , 13, 69.2f, 1, 1, 2, false, true));
-			TriggerServerEvent("fourM:Server:AddBlip", pickup4);			
+			TriggerServerEvent("fourM:Server:AddBlip", pickup4, 156);			
 			
 
 			TriggerEvent("chat:addMessage", new
@@ -68,11 +78,12 @@ namespace FourMNameClient
 
 		}
 
-		private async void JSONDrop()
+		private async void JSONDrop() // /jsondrop
         {
 			IList<WeaponPickup> listWeaponDrop = new List<WeaponPickup>();
-			string file = LoadResourceFile(GetCurrentResourceName(), "weapondrops.json");
+			string file = LoadResourceFile(GetCurrentResourceName(), "weapondrops.json") ?? "Fart";
 			Debug.WriteLine("file contents: " + file);
+
 			dynamic weaponPickupsFile = JsonConvert.DeserializeObject(file);
 
 			try
@@ -86,7 +97,7 @@ namespace FourMNameClient
                         Convert.ToDouble(weaponPickup["x"]),
                         Convert.ToDouble(weaponPickup["y"]),
                         Convert.ToDouble(weaponPickup["z"]),
-                        Convert.ToUInt32(weaponPickup["pickup"]),
+                        Convert.ToUInt32(weaponPickup["hash"]),
                         Convert.ToInt32(weaponPickup["ammo"]),
                         Convert.ToInt32(weaponPickup["blip"])
                         ));
@@ -94,18 +105,18 @@ namespace FourMNameClient
 
 				foreach (WeaponPickup weaponDrop in listWeaponDrop)
 				{
-                    RequestModel(weaponDrop.Pickup);
-                    while (HasModelLoaded(weaponDrop.Pickup))
+                    RequestModel(weaponDrop.Hash);
+                    while (HasModelLoaded(weaponDrop.Hash))
                     {
                         await Delay(100);
                     }
 
-                    int pickup = ObjToNet(CreateAmbientPickup(weaponDrop.Pickup, weaponDrop.X, weaponDrop.Y, weaponDrop.Z, 1, 1, 2, false, true));
-                    TriggerServerEvent("fourM:Server:AddBlip", pickup);
+                    int pickup = ObjToNet(CreateAmbientPickup(weaponDrop.Hash, weaponDrop.X, weaponDrop.Y, weaponDrop.Z, 1, 1, 2, false, true));
+                    TriggerServerEvent("fourM:Server:AddBlip", pickup, 12);
                 }
 
             }
-			catch (Exception ex)
+			catch (JsonReaderException ex)
 			{
 				Debug.WriteLine("Failed to read file: " + ex.Message);
 			}

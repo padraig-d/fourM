@@ -10,17 +10,17 @@ namespace FourM.Server
     {
         public ServerWeaponDrop() 
         {               
-            EventHandlers["fourM:Server:AddBlip"] += new Action<int>(AddBlip);
+            EventHandlers["fourM:Server:AddBlip"] += new Action<int, int>(AddBlip);
             //EventHandlers["OnResourceStart"] += new Action(DropWeapon);
             EventHandlers["fourM:Server:DropWeapon"] += new Action(DropWeapon);
             EventHandlers["fourM:Server:JSONDrop"] += new Action(JSONDrop);
         }
 
-        private void AddBlip(int pickup)
+        private void AddBlip(int pickup, int blip)
         {
             int networkPickup = NetworkGetEntityFromNetworkId(pickup);
-            Debug.WriteLine(networkPickup.ToString());
-            SetBlipSprite(AddBlipForEntity(networkPickup), 156);
+            //Debug.WriteLine(networkPickup.ToString());
+            SetBlipSprite(AddBlipForEntity(networkPickup), blip);
         }
 
         private void DropWeapon() // /serverpickup
