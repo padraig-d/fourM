@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using CitizenFX.Core;
 using FourM.Client;
 using Mono.CompilerServices.SymbolWriter;
@@ -82,7 +83,7 @@ namespace FourMNameClient
         {
 			IList<WeaponPickup> listWeaponDrop = new List<WeaponPickup>();
 			string file = LoadResourceFile("resource", "weapondrops.json") ?? "Didn't load";
-			Debug.WriteLine("file contents: " + file);
+			// Debug.WriteLine("file contents: " + file);
 
 			dynamic weaponPickupsFile = JsonConvert.DeserializeObject(file);
 
@@ -93,16 +94,18 @@ namespace FourMNameClient
 				{
 
 					Debug.WriteLine("reached here!!!");
-					// listWeaponDrop.Add(new WeaponPickup(
-                    //     Convert.ToString(weaponPickup["name"]),
-                    //     Convert.ToInt32(weaponPickup["id"]),
-                    //     Convert.ToDouble(weaponPickup["x"]),
-                    //     Convert.ToDouble(weaponPickup["y"]),
-                    //     Convert.ToDouble(weaponPickup["z"]),
-                    //     Convert.ToUInt32(weaponPickup["hash"]),
-                    //     Convert.ToInt32(weaponPickup["ammo"]),
-                    //     Convert.ToInt32(weaponPickup["blip"])
-                    //     ));
+					listWeaponDrop.Add(new WeaponPickup(
+                        Convert.ToString(weaponPickup["name"]),
+                        Convert.ToInt32(weaponPickup["id"]),
+                        (float)Convert.ToDouble(weaponPickup["x"]),
+                        (float)Convert.ToDouble(weaponPickup["y"]),
+                        (float)Convert.ToDouble(weaponPickup["z"]),
+                        Convert.ToUInt32(weaponPickup["hash"]),
+                        Convert.ToInt32(weaponPickup["ammo"]),
+                        Convert.ToInt32(weaponPickup["blip"])
+                        ));
+
+					Debug.WriteLine(listWeaponDrop[listWeaponDrop.Count - 1].Name);
 				}
 
 				foreach (WeaponPickup weaponDrop in listWeaponDrop)
