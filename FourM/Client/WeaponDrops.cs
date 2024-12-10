@@ -82,18 +82,15 @@ namespace FourMNameClient
 		private async void JSONDrop() // /jsondrop
         {
 			IList<WeaponPickup> listWeaponDrop = new List<WeaponPickup>();
-			string file = LoadResourceFile("resource", "weapondrops.json") ?? "Didn't load";
-			// Debug.WriteLine("file contents: " + file);
-
+			string file = LoadResourceFile(GetCurrentResourceName(), "weapondrops.json") ?? "Didn't load";
 			dynamic weaponPickupsFile = JsonConvert.DeserializeObject(file);
-
 			try
 			{
 				JArray weaponPickupsJArray = (JArray)weaponPickupsFile["weaponDrops"];
 				foreach (dynamic weaponPickup in weaponPickupsJArray)
 				{
 
-					Debug.WriteLine("reached here!!!");
+					
 					listWeaponDrop.Add(new WeaponPickup(
                         Convert.ToString(weaponPickup["name"]),
                         Convert.ToInt32(weaponPickup["id"]),
