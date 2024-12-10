@@ -81,7 +81,7 @@ namespace FourMNameClient
 		private async void JSONDrop() // /jsondrop
         {
 			IList<WeaponPickup> listWeaponDrop = new List<WeaponPickup>();
-			string file = LoadResourceFile("resource", "weapondrops.json") ?? "Fart";
+			string file = LoadResourceFile("resource", "weapondrops.json") ?? "Didn't load";
 			Debug.WriteLine("file contents: " + file);
 
 			dynamic weaponPickupsFile = JsonConvert.DeserializeObject(file);
@@ -91,28 +91,30 @@ namespace FourMNameClient
 				JArray weaponPickupsJArray = (JArray)weaponPickupsFile["weaponDrops"];
 				foreach (dynamic weaponPickup in weaponPickupsJArray)
 				{
-					listWeaponDrop.Add(new WeaponPickup(
-                        Convert.ToString(weaponPickup["name"]),
-                        Convert.ToInt32(weaponPickup["id"]),
-                        Convert.ToDouble(weaponPickup["x"]),
-                        Convert.ToDouble(weaponPickup["y"]),
-                        Convert.ToDouble(weaponPickup["z"]),
-                        Convert.ToUInt32(weaponPickup["hash"]),
-                        Convert.ToInt32(weaponPickup["ammo"]),
-                        Convert.ToInt32(weaponPickup["blip"])
-                        ));
+
+					Debug.WriteLine("reached here!!!");
+					// listWeaponDrop.Add(new WeaponPickup(
+                    //     Convert.ToString(weaponPickup["name"]),
+                    //     Convert.ToInt32(weaponPickup["id"]),
+                    //     Convert.ToDouble(weaponPickup["x"]),
+                    //     Convert.ToDouble(weaponPickup["y"]),
+                    //     Convert.ToDouble(weaponPickup["z"]),
+                    //     Convert.ToUInt32(weaponPickup["hash"]),
+                    //     Convert.ToInt32(weaponPickup["ammo"]),
+                    //     Convert.ToInt32(weaponPickup["blip"])
+                    //     ));
 				}
 
 				foreach (WeaponPickup weaponDrop in listWeaponDrop)
 				{
-                    RequestModel(weaponDrop.Hash);
-                    while (HasModelLoaded(weaponDrop.Hash))
-                    {
-                        await Delay(100);
-                    }
+                    // RequestModel(weaponDrop.Hash);
+                    // while (HasModelLoaded(weaponDrop.Hash))
+                    // {
+                    //     await Delay(100);
+                    // }
 
-                    int pickup = ObjToNet(CreateAmbientPickup(weaponDrop.Hash, weaponDrop.X, weaponDrop.Y, weaponDrop.Z, 1, 1, 2, false, true));
-                    TriggerServerEvent("fourM:Server:AddBlip", pickup, 12);
+                    // int pickup = ObjToNet(CreateAmbientPickup(weaponDrop.Hash, weaponDrop.X, weaponDrop.Y, weaponDrop.Z, 1, 1, 2, false, true));
+                    // TriggerServerEvent("fourM:Server:AddBlip", pickup, 12);
                 }
 
             }
