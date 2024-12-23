@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj": {}
+    "F:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj": {}
   },
   "projects": {
-    "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj": {
+    "F:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
+        "projectUniqueName": "F:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
         "projectName": "MyResource.Client",
-        "projectPath": "f:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
+        "projectPath": "F:\\FXServer\\scripting\\FourM\\Client\\MyResource.Client.csproj",
         "packagesPath": "C:\\Users\\Visio\\.nuget\\packages\\",
-        "outputPath": "f:\\FXServer\\scripting\\FourM\\Client\\obj\\",
+        "outputPath": "F:\\FXServer\\scripting\\FourM\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

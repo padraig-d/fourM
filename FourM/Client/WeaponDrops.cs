@@ -82,6 +82,8 @@ namespace FourMNameClient
 		private async void JSONDrop() // /jsondrop
         {
 			IList<WeaponPickup> listWeaponDrop = new List<WeaponPickup>();
+			WeaponPickupHelper helper = new WeaponPickupHelper();
+		
 			string file = LoadResourceFile(GetCurrentResourceName(), "weapondrops.json") ?? "Didn't load";
 			dynamic weaponPickupsFile = JsonConvert.DeserializeObject(file);
 			try
@@ -89,39 +91,38 @@ namespace FourMNameClient
 				JArray weaponPickupsJArray = (JArray)weaponPickupsFile["weaponDrops"];
 				foreach (dynamic weaponPickup in weaponPickupsJArray)
 				{
-
-					
 					listWeaponDrop.Add(new WeaponPickup(
-                        Convert.ToString(weaponPickup["name"]),
-                        Convert.ToInt32(weaponPickup["id"]),
-                        (float)Convert.ToDouble(weaponPickup["x"]),
-                        (float)Convert.ToDouble(weaponPickup["y"]),
-                        (float)Convert.ToDouble(weaponPickup["z"]),
-                        Convert.ToUInt32(weaponPickup["hash"]),
-                        Convert.ToInt32(weaponPickup["ammo"]),
-                        Convert.ToInt32(weaponPickup["blip"])
-                        ));
+						Convert.ToString(weaponPickup["name"]),
+						Convert.ToInt32(weaponPickup["id"]),
+						(float)Convert.ToDouble(weaponPickup["x"]),
+						(float)Convert.ToDouble(weaponPickup["y"]),
+						(float)Convert.ToDouble(weaponPickup["z"]),
+						Convert.ToUInt32(weaponPickup["hash"]),
+						Convert.ToInt32(weaponPickup["ammo"]),
+						Convert.ToInt32(weaponPickup["blip"])
+						));
 
 					Debug.WriteLine(listWeaponDrop[listWeaponDrop.Count - 1].Name);
 				}
 
 				foreach (WeaponPickup weaponDrop in listWeaponDrop)
 				{
-                    // RequestModel(weaponDrop.Hash);
-                    // while (HasModelLoaded(weaponDrop.Hash))
-                    // {
-                    //     await Delay(100);
-                    // }
+					RequestModel(weaponDrop.Hash);
+					while (HasModelLoaded(weaponDrop.Hash))
+					{
+						await Delay(100);
+					}
 
-                    // int pickup = ObjToNet(CreateAmbientPickup(weaponDrop.Hash, weaponDrop.X, weaponDrop.Y, weaponDrop.Z, 1, 1, 2, false, true));
-                    // TriggerServerEvent("fourM:Server:AddBlip", pickup, 12);
-                }
+					helper.createPickup(weaponDrop);
+				}
 
-            }
+			}
 			catch (JsonReaderException ex)
 			{
 				Debug.WriteLine("Failed to read file: " + ex.Message);
+			
 			}
+
 		}
 
     }

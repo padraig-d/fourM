@@ -1,6 +1,7 @@
 using CitizenFX.Core;
 using System;
 using System.Linq;
+using System.Threading;
 using System.Xml.XPath;
 using static CitizenFX.Core.Native.API;
 
@@ -19,7 +20,6 @@ namespace FourM.Server
         private void AddBlip(int pickup, int blip)
         {
             int networkPickup = NetworkGetEntityFromNetworkId(pickup);
-            //Debug.WriteLine(networkPickup.ToString());
             SetBlipSprite(AddBlipForEntity(networkPickup), blip);
         }
 
