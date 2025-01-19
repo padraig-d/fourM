@@ -38,4 +38,5 @@ public class WeaponPickup
     public int Ammo { get => ammo; set => ammo = value; }
     public int Blip { get => blip; set => blip = value; }
     public int Pickup { get => pickup; set => pickup = value; }
+
 }

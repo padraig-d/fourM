@@ -4,7 +4,7 @@ using CitizenFX.Core;
 using Newtonsoft.Json;
 using static CitizenFX.Core.Native.API;
 
-namespace MyResource.Client
+namespace FourM.Client
 {
     public class Nui : BaseScript
     {

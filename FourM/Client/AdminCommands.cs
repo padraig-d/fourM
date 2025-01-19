@@ -5,7 +5,9 @@ using Mono.CompilerServices.SymbolWriter;
 using Mono.CSharp;
 using static CitizenFX.Core.Native.API;
 
-namespace FourMNameClient
+
+
+namespace FourM.Client
 {
     public class AdminCommands : BaseScript
     {

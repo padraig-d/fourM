@@ -17,7 +17,8 @@ namespace FourM.Client
 
         [Tick]
         public Task OnTick()
-        {
+        {   
+            
             return Task.FromResult(0);
         }
 

@@ -9,6 +9,5 @@
         "**/Client/Client.sln": true,
         "**/Client/MyResource.Client.csproj": true,
         "**/Server/MyResource.Server.csproj": true,
-        "**/MyResource.sln": true,
     }
 }

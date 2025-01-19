@@ -8,10 +8,10 @@ using Mono.CompilerServices.SymbolWriter;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using static CitizenFX.Core.Native.API;
+using static FourM.Client.HelperFunctions;
 
-namespace FourMNameClient
+namespace FourM.Client
 {
-
 	public class WeaponPickupHelper : BaseScript {
 		public void createPickup(WeaponPickup weapon) {
 
@@ -25,8 +25,7 @@ namespace FourMNameClient
     public class WeaponDrops : BaseScript
     {
         public WeaponDrops()
-        {
-			// EventHandlers["onClientResourceStart"] += new Action(DropWeapon);			
+        {		
             EventHandlers["fourM:Client:DropWeapon"] += new Action(DropWeapon);
 			EventHandlers["fourM:Client:DropWeaponCommand"] += new Action(DropWeaponCommand);
 			EventHandlers["fourM:Client:JSONDrop"] += new Action(JSONDrop);
@@ -42,12 +41,7 @@ namespace FourMNameClient
 			WeaponPickup testWeapon = new WeaponPickup("deagle", 1, x, y, z, 1817941018, 9, 156);
 			
 			helper.createPickup(testWeapon);
-
-			TriggerEvent("chat:addMessage", new
-				{
-					color = new[] { 255, 0, 0 },
-					args = new[] { $"Weapon Dropped! Pickup: {testWeapon.Pickup}" }
-				});	
+			PrintChatMessage($"Weapon Dropped! Pickup: {testWeapon.Pickup}");
 		}
 
 		private async void DropWeapon()  // /serverpickup
@@ -70,13 +64,7 @@ namespace FourMNameClient
 			int pickup4 = ObjToNet(CreateAmbientPickup(1817941018, 53 , 13, 69.2f, 1, 1, 2, false, true));
 			TriggerServerEvent("fourM:Server:AddBlip", pickup4, 156);			
 			
-
-			TriggerEvent("chat:addMessage", new
-			{
-				color = new[] { 255, 0, 0 },
-				args = new[] { $"DropWeapon() ran" }
-			});	
-
+			PrintChatMessage($"DropWeapon() ran");
 		}
 
 		private async void JSONDrop() // /jsondrop

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using CitizenFX.Core;
 using static CitizenFX.Core.Native.API;
 
-namespace FourMNameClient
+namespace FourM.Client
 {
     public class Class1 : BaseScript
     {
