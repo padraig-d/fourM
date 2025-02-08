@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JlLJyeMe2Qc=",
+  "dgSpecHash": "xtna/B/4QCU=",
   "success": true,
-  "projectFilePath": "F:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
+  "projectFilePath": "f:\\FXServer\\scripting\\FourM\\Server\\MyResource.Server.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Visio\\.nuget\\packages\\citizenfx.core.server\\1.0.10230\\citizenfx.core.server.1.0.10230.nupkg.sha512",
     "C:\\Users\\Visio\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

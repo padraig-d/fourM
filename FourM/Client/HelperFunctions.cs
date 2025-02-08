@@ -22,6 +22,15 @@ namespace FourM.Client
             Debug.WriteLine(input);
         }
 
+        public static async void CreatePickup(WeaponPickup weapon) {
+
+			Prop pickup = await World.CreateAmbientPickup((PickupType)weapon.Hash, weapon.Position, weapon.Name , weapon.Ammo);
+            Blip weaponBlip = pickup.AttachBlip();
+            weaponBlip.Sprite = (BlipSprite)weapon.Blip;
+
+			CitizenFX.Core.BaseScript.TriggerServerEvent("fourM:Server:AddBlip", weapon.Pickup, weapon.Blip);
+		}
+
     }
 }
 

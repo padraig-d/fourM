@@ -2,7 +2,7 @@
 "weaponDrops" :
     [
         {
-            "name" : "BERRETTA",
+            "name" : "W_PI_PISTOL",
             "id" : 1,
             "x" : -442,
             "y" : 6057,
@@ -12,7 +12,7 @@
             "blip" : 156
         },
         {
-            "name" : "AK47",
+            "name" : "W_AR_ASSAULTRIFLE",
             "id" : 2,
             "x" : -433,
             "y" : 6050,
@@ -22,7 +22,7 @@
             "blip" : 150
         },
         {
-            "name" : "MP5",
+            "name" : "w_sb_smg",
             "id" : 3,
             "x" : -400,
             "y" : 6089,
