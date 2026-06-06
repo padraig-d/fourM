@@ -1,10 +1,7 @@
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 using CitizenFX.Core;
-using Mono.CSharp;
 using static CitizenFX.Core.Native.API;
-using static FourM.Client.HelperFunctions;
 
 namespace FourM.Client
 {
@@ -16,19 +13,6 @@ namespace FourM.Client
             EventHandlers["onClientResourceStart"] += new Action<string>(OnClientResourceStart);
             EventHandlers["onClientResourceStop"] += new Action<string>(OnClientResourceStop);
         }
-
-        [Tick] // adds to Tick event queue, on every Tick it runs every single function marked with [Tick]
-        public async Task OnTick()
-        {   
-            await Task.FromResult(0);
-        }
-
-        [Tick]
-        // public async Task TickChat() 
-        // {
-        //     await Delay(1000);
-        //     PrintChatMessage("Hey");
-        // }
 
         private void OnClientResourceStart(string resourceName)
         {
@@ -61,8 +45,9 @@ namespace FourM.Client
 
 
         }
-        private void OnClientResourceStop(string resourceName) {
-            Tick -= OnTick;
+        private void OnClientResourceStop(string resourceName)
+        {
+            if (GetCurrentResourceName() != resourceName) return;
         }
     }
 

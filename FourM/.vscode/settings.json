@@ -3,11 +3,7 @@
         ".gitignore": true,
         "**/.vs": true,
         "**/dist": true,
-        "README.md": true,
-        "**/resource": true,
-        "Newtonsoft.Json.dll": true,
-        "**/Client/Client.sln": true,
-        "**/Client/MyResource.Client.csproj": true,
-        "**/Server/MyResource.Server.csproj": true,
+        "**/bin": true,
+        "**/obj": true
     }
 }

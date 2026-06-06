@@ -1,8 +1,6 @@
 using CitizenFX.Core;
 using System;
 using System.Linq;
-using System.Threading;
-using System.Xml.XPath;
 using static CitizenFX.Core.Native.API;
 
 namespace FourM.Server
@@ -25,14 +23,14 @@ namespace FourM.Server
 
         private void DropWeapon() // /serverpickup
         {   
-            Player player = Players.First();
-            player.TriggerEvent("fourM:Client:DropWeapon");
+            Player player = Players.FirstOrDefault();
+            player?.TriggerEvent("fourM:Client:DropWeaponCommand");
         }
 
         private void JSONDrop() // /jsondrop
         {   
-            Player player = Players.First();
-            player.TriggerEvent("fourM:Client:JSONDrop");
+            Player player = Players.FirstOrDefault();
+            player?.TriggerEvent("fourM:Client:JSONDrop");
         }
     }
 }

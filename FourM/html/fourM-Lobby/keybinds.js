@@ -1,11 +1,15 @@
-$(document).keydown(function(e){
-    if (e.which == 13){
-        $("#ready-button").click().addClass('button-active');
+"use strict";
+
+document.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+        const readyButton = document.getElementById("ready-button");
+        readyButton.click();
+        readyButton.classList.add("button-active");
     }
 });
 
-$(document).keyup(function(e){
-    if (e.which == 13){
-        $("#ready-button").click().removeClass('button-active');
+document.addEventListener("keyup", function (event) {
+    if (event.key === "Enter") {
+        document.getElementById("ready-button").classList.remove("button-active");
     }
 });

@@ -1,7 +1,9 @@
+"use strict";
+
 function setLocalPlayerName(pName) {
     if (pName == null) return;
     
-    var localPlayerElement = document.getElementById("local-player-name");
+    const localPlayerElement = document.getElementById("local-player-name");
     localPlayerElement.textContent = pName;
 }
 
@@ -12,14 +14,33 @@ function getLocalPlayerNameValue() {
 function updatePlayerList(players) {
     if (players == null) return;
 
-    let localPlayerName = getLocalPlayerNameValue();
-    let playerListHTML = document.getElementById("player-list");
+    const localPlayerName = getLocalPlayerNameValue();
+    const playerList = document.getElementById("player-list");
+
+    for (const playerListItem of playerList.querySelectorAll("li:not(.client-player)")) {
+        playerListItem.remove();
+    }
 
     for (const player of players) {
-        if (player != localPlayerName) {
-            let playerListItem = document.createElement("li");
-            playerListItem.innerHTML = `<li><span>${player}</span> <label class="checkbox"><input type="checkbox" disabled><span class="checkmark"></span></label></li>`
-            playerListHTML.appendChild(playerListItem);            
-        }
+        if (player === localPlayerName) continue;
+
+        const playerListItem = document.createElement("li");
+        const playerName = document.createElement("span");
+        const checkboxLabel = document.createElement("label");
+        const checkboxInput = document.createElement("input");
+        const checkmark = document.createElement("span");
+
+        playerName.textContent = player;
+        checkboxLabel.className = "checkbox";
+        checkboxInput.type = "checkbox";
+        checkboxInput.disabled = true;
+        checkmark.className = "checkmark";
+
+        checkboxLabel.appendChild(checkboxInput);
+        checkboxLabel.appendChild(checkmark);
+        playerListItem.appendChild(playerName);
+        playerListItem.appendChild(document.createTextNode(" "));
+        playerListItem.appendChild(checkboxLabel);
+        playerList.appendChild(playerListItem);
     }
 }

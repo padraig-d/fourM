@@ -1,8 +1,6 @@
 using System;
 using System.Collections.Generic;
 using CitizenFX.Core;
-using Mono.CompilerServices.SymbolWriter;
-using Mono.CSharp;
 using static CitizenFX.Core.Native.API;
 
 
@@ -19,13 +17,21 @@ namespace FourM.Client
         }
         private void Teleport(List<object> args) // /tp
         {	
-            int player = Game.Player.GetHashCode();
+            if (args.Count < 3 ||
+                !float.TryParse(args[0]?.ToString(), out float x) ||
+                !float.TryParse(args[1]?.ToString(), out float y) ||
+                !float.TryParse(args[2]?.ToString(), out float z))
+            {
+                TriggerEvent("chat:addMessage", new
+                {
+                    color = new[] { 255, 0, 0 },
+                    args = new[] { "Usage: /tp <x> <y> <z>" }
+                });
 
-            float x = float.Parse(args[0].ToString());
-            float y = float.Parse(args[1].ToString());
-            float z = float.Parse(args[2].ToString());
+                return;
+            }
 
-            StartPlayerTeleport(player, x, y, z, 0, true, true, true);
+            StartPlayerTeleport(PlayerId(), x, y, z, 0, true, true, true);
 		}
 
         private void Coordinates() // /coords

@@ -1,8 +1,6 @@
 using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using CitizenFX.Core;
-using Mono.CSharp;
 using static CitizenFX.Core.Native.API;
 
 namespace FourM.Client
@@ -22,13 +20,17 @@ namespace FourM.Client
             Debug.WriteLine(input);
         }
 
-        public static async void CreatePickup(WeaponPickup weapon) {
+        public static async Task<Prop> CreatePickup(WeaponPickup weapon) {
 
 			Prop pickup = await World.CreateAmbientPickup((PickupType)weapon.Hash, weapon.Position, weapon.Name , weapon.Ammo);
+            weapon.Pickup = pickup;
+
             Blip weaponBlip = pickup.AttachBlip();
             weaponBlip.Sprite = (BlipSprite)weapon.Blip;
 
-			CitizenFX.Core.BaseScript.TriggerServerEvent("fourM:Server:AddBlip", weapon.Pickup, weapon.Blip);
+			CitizenFX.Core.BaseScript.TriggerServerEvent("fourM:Server:AddBlip", NetworkGetNetworkIdFromEntity(pickup.Handle), weapon.Blip);
+
+            return pickup;
 		}
 
     }

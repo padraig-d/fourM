@@ -1,17 +1,18 @@
+"use strict";
+
 function displayNui(display) {
-    console.log(display)
     if (display) { 
-        $("body").show(); 
+        document.body.style.display = "flex";
     } else { 
-        $("body").hide(); 
+        document.body.style.display = "none";
     }
 }
 
 window.addEventListener('message', (event) => {
-    let data = event.data;
+    const data = event.data;
 
     if (data.type === 'display') {
-        displayNui(event.data.display);
+        displayNui(data.display);
     } else if (data.action === 'setLocalPlayerName') {
         setLocalPlayerName(data.pName);
     } else if (data.action === 'updatePlayerList') {

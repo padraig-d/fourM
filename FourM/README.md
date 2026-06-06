@@ -1,8 +1,11 @@
 # FourM
 
-FourM Is a conversion of GTA4 multiplayer gamemodes into FiveM. 
+FourM is a conversion of GTA IV multiplayer gamemodes into FiveM.
 
 Work in Progress.
 
+## Build
 
-To build it, run `build.cmd`. To run it, put the dist folder into your FiveMServer server-data directory.
+Run `build.cmd` from the repository root. The build restores NuGet packages, builds the C# client/server projects, and copies the deployable resource files into `resource`.
+
+To run it, copy or symlink the `resource` folder into your FiveM server resources directory and ensure it from `server.cfg`.

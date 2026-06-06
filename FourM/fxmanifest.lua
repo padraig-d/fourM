@@ -4,18 +4,16 @@ game 'gta5'
 ui_page 'html/fourM-Lobby/index.html'
 
 files {
+    'html/fourM-Lobby/index.html',
     'html/fourM-Lobby/*.js',
     'html/fourM-Lobby/*.css',
-    'html/fourM-Lobby/*.html',
     'Newtonsoft.Json.dll',
     'weapondrops.json'
 }
 
-file 'weapondrops.json'
+client_script 'MyResource.Client.net.dll'
+server_script 'MyResource.Server.net.dll'
 
-client_script '*.Client.net.dll'
-server_script '*.Server.net.dll'
-
-author 'You'
+author 'FourM'
 version '1.0.0'
-description 'Example Resource from C# Template'
+description 'GTA IV multiplayer gamemode conversions for FiveM'

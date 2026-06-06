@@ -19,7 +19,7 @@ namespace FourM.Client
             RegisterCommand("car", new Action<int, List<object>, string>(async (source, args, raw) =>
             {
                 // account for the argument not being passed
-                var model = "adder";
+                string model = "adder";
                 if (args.Count > 0)
                 {
                     model = args[0].ToString();
@@ -27,7 +27,7 @@ namespace FourM.Client
 
                 // check if the model actually exists
                 // assumes the directive `using static CitizenFX.Core.Native.API;`
-                var hash = (uint)GetHashKey(model);
+                uint hash = (uint)GetHashKey(model);
                 if (!IsModelInCdimage(hash) || !IsModelAVehicle(hash))
                 {
                     TriggerEvent("chat:addMessage", new
@@ -39,7 +39,7 @@ namespace FourM.Client
                 }
 
                 // create the vehicle
-                var vehicle = await World.CreateVehicle(model, Game.PlayerPed.Position, Game.PlayerPed.Heading);
+                Vehicle vehicle = await World.CreateVehicle(model, Game.PlayerPed.Position, Game.PlayerPed.Heading);
 
                 // set the player ped into the vehicle and driver seat
                 Game.PlayerPed.SetIntoVehicle(vehicle, VehicleSeat.Driver);

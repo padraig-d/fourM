@@ -31,9 +31,9 @@ namespace FourM.Client
                     );
 
                 List<string> playerNames = new List<string>();
-                foreach (var p in GetActivePlayers())
+                foreach (Player player in Players)
                 {
-                    playerNames.Add(GetPlayerName(p));
+                    playerNames.Add(player.Name);
                 }
 
                 SendNuiMessage(

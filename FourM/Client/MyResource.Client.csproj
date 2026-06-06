@@ -1,7 +1,10 @@
-<Project Sdk="CitizenFX.Sdk.Client/0.2.3">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <LangVersion>default</LangVersion>
-        <RunPostBuildEvent>Always</RunPostBuildEvent>
+        <TargetFramework>net452</TargetFramework>
+        <DebugType>portable</DebugType>
+        <TargetName>$(AssemblyName).net</TargetName>
+        <LangVersion>latest</LangVersion>
+        <ResourceOutputPath>$(MSBuildProjectDirectory)\..\resource\</ResourceOutputPath>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
         <OutputPath>bin\Release</OutputPath>
@@ -10,11 +13,19 @@
         <Compile Include="../Shared/**/*.cs" />
     </ItemGroup>
     <ItemGroup>
-      <Reference Include="Newtonsoft.Json">
-        <HintPath>..\Newtonsoft.Json.dll</HintPath>
-      </Reference>
+        <PackageReference Include="CitizenFX.Core.Client" Version="1.0.26803" />
+        <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies.net452" Version="1.0.3" PrivateAssets="All" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
     </ItemGroup>
-    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-        <Exec Command="xcopy /Y &quot;$(TargetDir)*.*&quot; &quot;$(ProjectDir)..\resource\&quot;&#xA;xcopy /Y &quot;$(ProjectDir)..\fxmanifest.lua&quot; &quot;$(ProjectDir)..\resource\&quot;&#xA;xcopy /Y /E /I &quot;$(ProjectDir)..\html\*&quot; &quot;$(ProjectDir)..\resource\html\&quot;&#xA;" />
+    <Target Name="CopyClientResourceFiles" AfterTargets="Build">
+        <ItemGroup>
+            <BuildOutputFiles Include="$(TargetDir)**\*.*" />
+            <HtmlFiles Include="$(MSBuildProjectDirectory)\..\html\**\*.*" />
+        </ItemGroup>
+        <MakeDir Directories="$(ResourceOutputPath)" />
+        <MakeDir Directories="$(ResourceOutputPath)html" />
+        <Copy SourceFiles="@(BuildOutputFiles)" DestinationFolder="$(ResourceOutputPath)%(RecursiveDir)" SkipUnchangedFiles="true" />
+        <Copy SourceFiles="$(MSBuildProjectDirectory)\..\fxmanifest.lua" DestinationFolder="$(ResourceOutputPath)" SkipUnchangedFiles="true" />
+        <Copy SourceFiles="@(HtmlFiles)" DestinationFiles="@(HtmlFiles->'$(ResourceOutputPath)html\%(RecursiveDir)%(Filename)%(Extension)')" SkipUnchangedFiles="true" />
     </Target>
 </Project>

@@ -1,6 +1,4 @@
 using System;
-using System.Threading;
-using System.Threading.Tasks;
 using CitizenFX.Core;
 using static CitizenFX.Core.Native.API;
 
@@ -11,10 +9,12 @@ namespace FourM.Server
         public static int WeaponDrops { get; set; }
         public ServerMain()
         {
-            EventHandlers["onResourceStart"] += new Action(OnClientResourceStart);
+            EventHandlers["onResourceStart"] += new Action<string>(OnResourceStart);
         }
-        public void OnClientResourceStart() 
+        public void OnResourceStart(string resourceName) 
         {
+            if (GetCurrentResourceName() != resourceName) return;
+
             TriggerClientEvent("chat:addMessage", new
 			{
 				color = new[] { 255, 0, 0 },

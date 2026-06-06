@@ -1,34 +1,36 @@
+"use strict";
+
 function getGameOptions() {
-    var gamemodeSettings = [];
-    var gamemodeSettingsTable = document.getElementById("gamemode-settings-table");
-    var rowLength = gamemodeSettingsTable.rows.length;
+    const gamemodeSettings = {};
+    const gamemodeSettingsTable = document.getElementById("gamemode-settings-table");
+    const rowLength = gamemodeSettingsTable.rows.length;
 
-    for (i = 0; i < rowLength; i++) {
-        var gamemodeSettingCells = gamemodeSettingsTable.rows.item(i).cells;
+    for (let i = 0; i < rowLength; i++) {
+        const gamemodeSettingCells = gamemodeSettingsTable.rows.item(i).cells;
 
-        var key = gamemodeSettingCells.item(0).textContent;
-        var value = gamemodeSettingCells.item(1).textContent;
+        const key = gamemodeSettingCells.item(0).textContent;
+        const value = gamemodeSettingCells.item(1).textContent;
 
         gamemodeSettings[key] = value;
     }
 
-    return gamemodeSettings
+    return gamemodeSettings;
 }
 
 function setGamemodeSetting(key, value) {
 
     if (key == null || value == null) return;
 
-    var gamemodeSettingsTable = document.getElementById("gamemode-settings-table");
-    var rowLength = gamemodeSettingsTable.rows.length;
+    const gamemodeSettingsTable = document.getElementById("gamemode-settings-table");
+    const rowLength = gamemodeSettingsTable.rows.length;
 
-    for (i = 0; i < rowLength; i++) {
-        var gamemodeSettingCells = gamemodeSettingsTable.rows.item(i).cells;
+    for (let i = 0; i < rowLength; i++) {
+        const gamemodeSettingCells = gamemodeSettingsTable.rows.item(i).cells;
 
-        var currKey = gamemodeSettingCells.item(0).textContent;
-        var currValue = gamemodeSettingCells.item(1);
+        const currKey = gamemodeSettingCells.item(0).textContent;
+        const currValue = gamemodeSettingCells.item(1);
 
-        if (currKey == key) {
+        if (currKey === key) {
             currValue.textContent = value;
         }
     }
@@ -38,7 +40,7 @@ function setGamemodeSetting(key, value) {
 function setCountdownTimerValue(value) {
     if (value == null) return;
 
-    var countdownTimer = document.getElementById("countdown-timer");
+    const countdownTimer = document.getElementById("countdown-timer");
     countdownTimer.textContent = "Starting in " + value;
 }
 
@@ -50,7 +52,7 @@ function startCountdownTimer(seconds) {
     setCountdownTimerValue(seconds);
     seconds--;
 
-    var interval = setInterval(function(){
+    const interval = setInterval(function(){
         if (seconds <= 0) {
             clearInterval(interval);
         }
